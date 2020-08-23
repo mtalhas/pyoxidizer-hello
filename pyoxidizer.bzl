@@ -61,7 +61,7 @@ def make_exe(dist):
     # resources, and other options. The returned object represents the
     # standalone executable that will be built.
     exe = dist.to_python_executable(
-        name="layer7_monitor",
+        name="hello",
         resources_policy="in-memory-only",
         config=python_config,
         # Embed all extension modules, making this a fully-featured Python.
@@ -109,7 +109,7 @@ def make_exe(dist):
     # context, taking just the resources belonging to the `foo` and `bar`
     # Python packages.
     exe.add_in_memory_python_resources(dist.read_package_root(
-        path="/home/centos/layer7_monitor/",
+        path="/home/centos/hello/",
         packages=[
             "hello"
         ],
